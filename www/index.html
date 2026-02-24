@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Are we moz-src:// yet?</title>
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
-    <script src="fetch-utils.js"></script>
-    <script src="shared.js"></script>
     <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -29,14 +27,14 @@
     <script>
 
       async function load(file) {
-        let resp = await fetchData(file);
+        let resp = await fetch(file);
         if (resp.ok) {
           return resp.json();
         }
       }
 
       (async () => {
-        let data = await load('data.json');
+        let data = await load('data/data.json');
 
         data.sort((a, b) => b.commit_date - a.commit_date);
 
