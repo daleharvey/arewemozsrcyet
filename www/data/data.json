@@ -1,0 +1,1490 @@
+[
+  {
+    "ACTORS": 207,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 223,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "03ade94314b7318be249b7bf3e0c6d7e81c7c581",
+    "commit_date": 1765794531
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 755,
+    "MOZ_SRC_FILES": 187,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "055d71eced482359656286f758441db36227a9de",
+    "commit_date": 1759747134
+  },
+  {
+    "ACTORS": 260,
+    "EXTRA_JS_MODULES": 749,
+    "MOZ_SRC_FILES": 280,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "061c65833ec82b5fa3653626e15ca6b06d4b1d88",
+    "commit_date": 1771237866
+  },
+  {
+    "ACTORS": 254,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 274,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "0711eeab07754d44f2583c08eb5974c699c1ab83",
+    "commit_date": 1770633463
+  },
+  {
+    "ACTORS": 261,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 281,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "0967c0e11ccd5282b823dfcb6bffef8272180e44",
+    "commit_date": 1771409431
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 764,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "09765611e405401698de875a631704b37b1ae06d",
+    "commit_date": 1762424808
+  },
+  {
+    "ACTORS": 218,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 237,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "0aaf10f74f5189678fbfdd64e37888d7fe86c5e1",
+    "commit_date": 1766818128
+  },
+  {
+    "ACTORS": 103,
+    "EXTRA_JS_MODULES": 821,
+    "MOZ_SRC_FILES": 116,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "0acd193a3a2d76b1d4b74465420c2f209a5a7ed6",
+    "commit_date": 1757746359
+  },
+  {
+    "ACTORS": 245,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 265,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "0c7e8705e9c0211bb79bf8e7543ffe0724db1ef4",
+    "commit_date": 1768558983
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "0c8cb1c7fba82367dd0611d62fc2d0ed7e446ef3",
+    "commit_date": 1761820893
+  },
+  {
+    "ACTORS": 176,
+    "EXTRA_JS_MODULES": 764,
+    "MOZ_SRC_FILES": 192,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "0df9ebba38e667abd4fb76adf2861d7e85c74b33",
+    "commit_date": 1762598703
+  },
+  {
+    "ACTORS": 249,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 269,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "0f06c67d0bca04531b6057bf84e54293003cf4b6",
+    "commit_date": 1769323837
+  },
+  {
+    "ACTORS": 249,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 269,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "0fe76c8ce3d368e16983de46f5d2ed3b11d78f82",
+    "commit_date": 1769078578
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 761,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "0fffa624ae50134ec75ae914b2ae9318150c4c8b",
+    "commit_date": 1760856724
+  },
+  {
+    "ACTORS": 172,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 185,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "10462329739cdd1eace1313cff86dc26943ab57b",
+    "commit_date": 1758105315
+  },
+  {
+    "ACTORS": 257,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 277,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "11a002cf622c6289a0173ad35bb1c7f18a40bd4e",
+    "commit_date": 1770977892
+  },
+  {
+    "ACTORS": 246,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 266,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "120d8ac06ff0135f27727b1a081c10134fe20ccd",
+    "commit_date": 1768300718
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 760,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "160944c54a1c35cd9455dd9ad5e34746c103102d",
+    "commit_date": 1760689084
+  },
+  {
+    "ACTORS": 247,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 266,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "177a7de62579a81ada9b51176c8b833ee70fae3b",
+    "commit_date": 1768039237
+  },
+  {
+    "ACTORS": 253,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 273,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "1a247e95869f6f712f6af4c4205682a89afeb59c",
+    "commit_date": 1770200291
+  },
+  {
+    "ACTORS": 250,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 270,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "1a8e35b27c8c4f77810efb2bf71fb412e54f8b80",
+    "commit_date": 1769764804
+  },
+  {
+    "ACTORS": 250,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 270,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "1e05e425a754870f84af87fedf78ddedb95ad799",
+    "commit_date": 1769928474
+  },
+  {
+    "ACTORS": 250,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 270,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "20222be51513e373bb75c3eee37450cda222c0e2",
+    "commit_date": 1769855528
+  },
+  {
+    "ACTORS": 254,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 274,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "219c49f5b702ec5d441e21556dd06da7ec82187c",
+    "commit_date": 1770373880
+  },
+  {
+    "ACTORS": 220,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 239,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "231c20bbdffc785521f438c0545bef6a5b4d0a53",
+    "commit_date": 1767090826
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "2680f1aa2acb32382b1e8c947f85f65e0aced478",
+    "commit_date": 1761562122
+  },
+  {
+    "ACTORS": 245,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 265,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "26f6dd6c134e075f2d8c69eadf316bd2e2c7d94c",
+    "commit_date": 1768644764
+  },
+  {
+    "ACTORS": 196,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 212,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "27f4f8868129f4aa133d2c60abad61aa2ff4419c",
+    "commit_date": 1765449595
+  },
+  {
+    "ACTORS": 249,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 269,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "2b63e4e597ae69ac16941fc0b2cea2c20ec66eaf",
+    "commit_date": 1769424062
+  },
+  {
+    "ACTORS": 208,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 224,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "2be25aae43d145fc7e28633e4045d9eced869fcb",
+    "commit_date": 1765967386
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 761,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "2c578dae0a6589854c12bbbf8898c901a7facbea",
+    "commit_date": 1760949899
+  },
+  {
+    "ACTORS": 249,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 269,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "314b019211ab1d84b5e0dc2b6e8e9b11faed67b7",
+    "commit_date": 1769505770
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "32d80d7cb1efb62547f39f47decbb85dcadb663f",
+    "commit_date": 1762079874
+  },
+  {
+    "ACTORS": 257,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 277,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "332cde04b938641c1cfb299bc9090b718e55c3ed",
+    "commit_date": 1771149630
+  },
+  {
+    "ACTORS": 100,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 113,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "335b538be8fa18f7cc56694f8fdaff2636550669",
+    "commit_date": 1756465276
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 758,
+    "MOZ_SRC_FILES": 190,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "33f4884e6b60eadba6212fcf24cfdd9a13282f1b",
+    "commit_date": 1760007291
+  },
+  {
+    "ACTORS": 103,
+    "EXTRA_JS_MODULES": 820,
+    "MOZ_SRC_FILES": 116,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "33f99602a56e8afc57a0227d5c48e2b027892ca6",
+    "commit_date": 1757329067
+  },
+  {
+    "ACTORS": 241,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 260,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "357bcd9a91704cbbea1a17a2cff522353b5d3b6f",
+    "commit_date": 1767782044
+  },
+  {
+    "ACTORS": 178,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 194,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "3668f545cf6d261d4fb39c761c8999815ba6e0c6",
+    "commit_date": 1763889352
+  },
+  {
+    "ACTORS": 178,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 194,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "387a0a054e626f840f5023c97fbb1c8d56136c2b",
+    "commit_date": 1763376682
+  },
+  {
+    "ACTORS": 178,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 194,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "3a459d51b89efc2e9122f912aafb3500153f255c",
+    "commit_date": 1763979214
+  },
+  {
+    "ACTORS": 257,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 277,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "3a90e6a43092715218e192b5b5283d690e37841a",
+    "commit_date": 1770892201
+  },
+  {
+    "ACTORS": 257,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 277,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "3b556af0639233f68c89a59316f1f935bd0807f0",
+    "commit_date": 1771060167
+  },
+  {
+    "ACTORS": 172,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 185,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "3e7ed8b0eba62df8b355b94107c5f045742ab7d9",
+    "commit_date": 1758187804
+  },
+  {
+    "ACTORS": 103,
+    "EXTRA_JS_MODULES": 820,
+    "MOZ_SRC_FILES": 116,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "42178c7191b36dfd2c2f2303ffaf98c375602acc",
+    "commit_date": 1757414885
+  },
+  {
+    "ACTORS": 176,
+    "EXTRA_JS_MODULES": 766,
+    "MOZ_SRC_FILES": 192,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "43db571e66d81ed58691994e453408607e1ce6c5",
+    "commit_date": 1763031053
+  },
+  {
+    "ACTORS": 178,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 194,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "4552a2f867a8074cfdd2c69fdde2aab0e33f129a",
+    "commit_date": 1763720173
+  },
+  {
+    "ACTORS": 249,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 269,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "4692b84a0943e015751c0b1b1105836202ecc5ce",
+    "commit_date": 1769237320
+  },
+  {
+    "ACTORS": 262,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 282,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "49e28ee57ec6adf9be498e94dca643d604d6dc10",
+    "commit_date": 1771840713
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 760,
+    "MOZ_SRC_FILES": 190,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "4b0a188f44b5ac5652bedd10216ec9acb4cd2215",
+    "commit_date": 1760439342
+  },
+  {
+    "ACTORS": 255,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 275,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "4c0a730d67947bfe4986df4c5ef6020f2d4e2e44",
+    "commit_date": 1770806307
+  },
+  {
+    "ACTORS": 220,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 239,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "4eaf9717396aa173beadf74f12fed52acfd50592",
+    "commit_date": 1767174518
+  },
+  {
+    "ACTORS": 262,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 282,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "579f94a380d6826bfff0f8c54f6f41d920c892ec",
+    "commit_date": 1771668703
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 758,
+    "MOZ_SRC_FILES": 189,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "5850b768d44e145e3bf715727f3c8631543c7b6a",
+    "commit_date": 1759920015
+  },
+  {
+    "ACTORS": 173,
+    "EXTRA_JS_MODULES": 754,
+    "MOZ_SRC_FILES": 186,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "59187fbc73b5de73905cf534cc3cfb0e9ecbc1d0",
+    "commit_date": 1759402027
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 761,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "5a87c2860e0264ed8dd14e1ac9d9a175d0ae417e",
+    "commit_date": 1760775900
+  },
+  {
+    "ACTORS": 100,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 113,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "5a8db8a6f06a3bafff6482b20a6e921c8a38544e",
+    "commit_date": 1756549328
+  },
+  {
+    "ACTORS": 217,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 236,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "5ae1543dc98ac21e17f609f848897272f0384440",
+    "commit_date": 1766484838
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "5c24f7dba833e96b28ecd6f00587e6aff19daeea",
+    "commit_date": 1761734792
+  },
+  {
+    "ACTORS": 172,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 185,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "5d0fc41f854ce6d205a950a03e110810bcfb2d2c",
+    "commit_date": 1758365090
+  },
+  {
+    "ACTORS": 221,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 240,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "5e022982db6bb7dac68a0c8ec056fedce56869a6",
+    "commit_date": 1767432558
+  },
+  {
+    "ACTORS": 100,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 113,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "5e25aa2de6beed009fba327ddf3e0109422cb01c",
+    "commit_date": 1756290575
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 758,
+    "MOZ_SRC_FILES": 190,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "60e814a2e1b8426e1e4ee2277a561bc6b06f8f89",
+    "commit_date": 1760251794
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 764,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "6394a18194c944bd4b71b7fbcdc7f8b122f6ddaa",
+    "commit_date": 1762511122
+  },
+  {
+    "ACTORS": 247,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 266,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "68a801f12c884688a6ecb714fa95ca147c66f636",
+    "commit_date": 1768213348
+  },
+  {
+    "ACTORS": 218,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 237,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "6a0626aaa09a87200258dbf6161fde44722c763e",
+    "commit_date": 1766651592
+  },
+  {
+    "ACTORS": 246,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 266,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "6abc5df50558f01b948223077007a13e0b7a5463",
+    "commit_date": 1768818849
+  },
+  {
+    "ACTORS": 173,
+    "EXTRA_JS_MODULES": 753,
+    "MOZ_SRC_FILES": 186,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "6cb63203e8f07dc2aebab7b09af08a03909a8c4b",
+    "commit_date": 1758966501
+  },
+  {
+    "ACTORS": 176,
+    "EXTRA_JS_MODULES": 765,
+    "MOZ_SRC_FILES": 192,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "6cf0a635af6bec239e165d05d306e54aeb6a62ae",
+    "commit_date": 1762944660
+  },
+  {
+    "ACTORS": 188,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 204,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "6e1cfb8bbf744c2d804bd54d078d0381fcdccf37",
+    "commit_date": 1765012532
+  },
+  {
+    "ACTORS": 100,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 113,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "6fd0596cf8bed6f5220d7e3b17680abfc02adb26",
+    "commit_date": 1756634863
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "71353cfaee7124e39e4bf3f545a16dc1efed5ebd",
+    "commit_date": 1761214628
+  },
+  {
+    "ACTORS": 173,
+    "EXTRA_JS_MODULES": 753,
+    "MOZ_SRC_FILES": 186,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "71d7c4fe34c08c55eafcd1e97bca9856f2ce75ea",
+    "commit_date": 1759142381
+  },
+  {
+    "ACTORS": 247,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 266,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "72a543fee7d16f07f6f04bd6caf7c7692ed291bf",
+    "commit_date": 1768128132
+  },
+  {
+    "ACTORS": 209,
+    "EXTRA_JS_MODULES": 771,
+    "MOZ_SRC_FILES": 225,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "74826fcb91a35f034cf00babf74cf8c08bf58fbf",
+    "commit_date": 1766213264
+  },
+  {
+    "ACTORS": 250,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 270,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "74f60a98d88797bfead8b725993ee754061158ef",
+    "commit_date": 1770028355
+  },
+  {
+    "ACTORS": 185,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 201,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7b2ff2964eb5ea5e1926bfeccadcc6888691d069",
+    "commit_date": 1764930870
+  },
+  {
+    "ACTORS": 192,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 208,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7baf2739c4d8e79863e2b104de4128cd17db893f",
+    "commit_date": 1765275565
+  },
+  {
+    "ACTORS": 103,
+    "EXTRA_JS_MODULES": 821,
+    "MOZ_SRC_FILES": 116,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7bf002d54747bb5fd9b680d9265dcbd9346674c2",
+    "commit_date": 1757584954
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7c0dde347f042d1320875472ecac5ce5eed93bbb",
+    "commit_date": 1761302938
+  },
+  {
+    "ACTORS": 249,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 269,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7ca6600efe7eff8ee0e0dc6f2c6666542766e2f4",
+    "commit_date": 1769595718
+  },
+  {
+    "ACTORS": 100,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 113,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7ccb6773bf7d1a538df6d401cf98d7f5faeba99d",
+    "commit_date": 1756375078
+  },
+  {
+    "ACTORS": 173,
+    "EXTRA_JS_MODULES": 753,
+    "MOZ_SRC_FILES": 186,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7ce636a5d6cfa47551720a7dcf3a981e96abb280",
+    "commit_date": 1759229466
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7d4f7bd0d78be29a70197a74e24adf28ec80448e",
+    "commit_date": 1761461355
+  },
+  {
+    "ACTORS": 207,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 223,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7db4be187b8b76d1894cc14c1a98e70ed5ee0f2d",
+    "commit_date": 1765698532
+  },
+  {
+    "ACTORS": 249,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 269,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7ec29fc4b24347c8446d8844883b1c300b257670",
+    "commit_date": 1769163748
+  },
+  {
+    "ACTORS": 253,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 273,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "7fa95dd7ece47dd24ed17886944b646a4e269284",
+    "commit_date": 1770114064
+  },
+  {
+    "ACTORS": 244,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 263,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "80d5982126c983d26836c0ba819b3f6fff5add18",
+    "commit_date": 1767952218
+  },
+  {
+    "ACTORS": 254,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 274,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "82a73c2c8b2dd9299fbd3b601d3bab5da82690ce",
+    "commit_date": 1770631009
+  },
+  {
+    "ACTORS": 262,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 282,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "871325b8460362073cb2069874bef7dde3170cb2",
+    "commit_date": 1771880710
+  },
+  {
+    "ACTORS": 257,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 277,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "8809696f32d69d80f975837f781b5d32eaed94a6",
+    "commit_date": 1770979145
+  },
+  {
+    "ACTORS": 215,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 234,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "89f3915515e59b0e38a040e983fdf95e8c4f8e22",
+    "commit_date": 1766395837
+  },
+  {
+    "ACTORS": 218,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 237,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "8c6cff1306fee9ece3ffdcde81f02d3548635060",
+    "commit_date": 1766732579
+  },
+  {
+    "ACTORS": 193,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 209,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "8d41135430152398012691936d1e53fe0b828b64",
+    "commit_date": 1765363133
+  },
+  {
+    "ACTORS": 172,
+    "EXTRA_JS_MODULES": 753,
+    "MOZ_SRC_FILES": 185,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "8e7d559526034ddb2edb905efd15bd406d5f589b",
+    "commit_date": 1758796456
+  },
+  {
+    "ACTORS": 103,
+    "EXTRA_JS_MODULES": 821,
+    "MOZ_SRC_FILES": 116,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "8ff45f2afb487b75c358d0ba880721ff653f71db",
+    "commit_date": 1757832810
+  },
+  {
+    "ACTORS": 103,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 116,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "90844026f37d4de25308028e2da9523186895ccc",
+    "commit_date": 1757154258
+  },
+  {
+    "ACTORS": 246,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 266,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "91734d67e4570b055fe1c566cd96b706dd977af5",
+    "commit_date": 1768904259
+  },
+  {
+    "ACTORS": 178,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 194,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "9243421d508e03d3cd094fb76c109050c7234843",
+    "commit_date": 1763463075
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "955a5ce240169d7e470717888adff8c8a607659e",
+    "commit_date": 1761906199
+  },
+  {
+    "ACTORS": 205,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 221,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "96d3392ab4540290fbf6ed1d250551c478025124",
+    "commit_date": 1765619417
+  },
+  {
+    "ACTORS": 253,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 273,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "97f1415ea8c652c3c93c6b92b12a07b562ed729b",
+    "commit_date": 1770285559
+  },
+  {
+    "ACTORS": 184,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 200,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "9b8f4e6e9e1f2aa1ea8104b693103caa0895fe34",
+    "commit_date": 1764671697
+  },
+  {
+    "ACTORS": 209,
+    "EXTRA_JS_MODULES": 771,
+    "MOZ_SRC_FILES": 225,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "9bd98b8da751763b34185904cb1108aab7dd0c7c",
+    "commit_date": 1766300193
+  },
+  {
+    "ACTORS": 182,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 198,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "9c5211a4ab70ab8a7f2863422e5eb35be9c9a955",
+    "commit_date": 1764585035
+  },
+  {
+    "ACTORS": 218,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 237,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "9c534e8a5910d797fbd7f1b931450f0d9875ead3",
+    "commit_date": 1767002123
+  },
+  {
+    "ACTORS": 209,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 225,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "9cfe831685694267ced2344018359b0f042d3cb8",
+    "commit_date": 1766139812
+  },
+  {
+    "ACTORS": 176,
+    "EXTRA_JS_MODULES": 764,
+    "MOZ_SRC_FILES": 192,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "9d590fcf3ffd488cdee2f6807cd059f025e427d3",
+    "commit_date": 1762857885
+  },
+  {
+    "ACTORS": 188,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 204,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "9fb37e4b9b00bd58bd05252357e9b7bd0e466140",
+    "commit_date": 1765189257
+  },
+  {
+    "ACTORS": 221,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 240,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "a0b5057dab54973a089db7b096bea12f6a252661",
+    "commit_date": 1767609044
+  },
+  {
+    "ACTORS": 182,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 198,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "a298edf3cf170ae4ef4fd7d1b0a69c8554bca127",
+    "commit_date": 1764491560
+  },
+  {
+    "ACTORS": 178,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 194,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "a2ae13bbcd8dbd33a943cd674b9cfde766c8e20a",
+    "commit_date": 1763545787
+  },
+  {
+    "ACTORS": 173,
+    "EXTRA_JS_MODULES": 753,
+    "MOZ_SRC_FILES": 186,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "a33355e3de86c3c81437319aacd9403b57355a93",
+    "commit_date": 1759055163
+  },
+  {
+    "ACTORS": 218,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 237,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "a4a14de2a139f8732e1b65ed2b718367fe731db8",
+    "commit_date": 1766914404
+  },
+  {
+    "ACTORS": 184,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 200,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "a5862a7e7064e721f95dad2a940bcb438f7fbc3f",
+    "commit_date": 1764757592
+  },
+  {
+    "ACTORS": 176,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 192,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "a6cb564e827269dd0bfd19900012955cec40d63a",
+    "commit_date": 1763117451
+  },
+  {
+    "ACTORS": 178,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 194,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "a7203f981a5384d7f156bdf007328e4678423646",
+    "commit_date": 1763202923
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 758,
+    "MOZ_SRC_FILES": 190,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "a7b3b2903c2b6fb87d0869ef12851c39adca480e",
+    "commit_date": 1760089112
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 755,
+    "MOZ_SRC_FILES": 187,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "aa124118714b8171a27d35a2820bd45c51eaec36",
+    "commit_date": 1759569191
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 761,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "aab924e90d346283b911992dc9507b1936e2d898",
+    "commit_date": 1761043453
+  },
+  {
+    "ACTORS": 102,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 115,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "ae2815a80d402f939ab005542de2e390ce82c08d",
+    "commit_date": 1757068596
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 762,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "ae425b2a55b4dd05374fbdcb80e09a19d1caa3e8",
+    "commit_date": 1761130452
+  },
+  {
+    "ACTORS": 172,
+    "EXTRA_JS_MODULES": 753,
+    "MOZ_SRC_FILES": 185,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "ae453557a5d05cd0fd481b9de01419ee44af17be",
+    "commit_date": 1758623785
+  },
+  {
+    "ACTORS": 103,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 116,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "ae731e05a820dd19768e61c426c15f57d47263b0",
+    "commit_date": 1757236641
+  },
+  {
+    "ACTORS": 178,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 194,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "ae90c334421ac2b61272b86d80f60ad91779ad60",
+    "commit_date": 1763288880
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "aeb9e95ec41054e480a2b3056b3f42046677656f",
+    "commit_date": 1761646558
+  },
+  {
+    "ACTORS": 220,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 239,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "aee7c0f24f488cd7f5a835803b48dd0c0cb2fd5f",
+    "commit_date": 1767250632
+  },
+  {
+    "ACTORS": 182,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 198,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "b09c265119bbab348cf9a1662fe9c4d80cb20d93",
+    "commit_date": 1764150771
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 758,
+    "MOZ_SRC_FILES": 190,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "b122b69bb68cfceb136f601047acbc213909482e",
+    "commit_date": 1760349900
+  },
+  {
+    "ACTORS": 181,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 197,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "b13e90b6db834deba5cf8e39f217d992b228a88e",
+    "commit_date": 1764065704
+  },
+  {
+    "ACTORS": 103,
+    "EXTRA_JS_MODULES": 821,
+    "MOZ_SRC_FILES": 116,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "b190107b8cea57761a324d646f8679f0f9807960",
+    "commit_date": 1757672976
+  },
+  {
+    "ACTORS": 204,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 220,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "b2239a2304b0cb1ce21718cd19095b5a5971fa6f",
+    "commit_date": 1765535909
+  },
+  {
+    "ACTORS": 172,
+    "EXTRA_JS_MODULES": 753,
+    "MOZ_SRC_FILES": 185,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "b239bac89dfb6006120e5a869b07c5fa60a05246",
+    "commit_date": 1758710274
+  },
+  {
+    "ACTORS": 173,
+    "EXTRA_JS_MODULES": 753,
+    "MOZ_SRC_FILES": 186,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "b379ac9e1ad5838cf68ecc8f39be5aa6fc1d013b",
+    "commit_date": 1759313061
+  },
+  {
+    "ACTORS": 173,
+    "EXTRA_JS_MODULES": 754,
+    "MOZ_SRC_FILES": 186,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "b383d13135c02470cb08301477094aa167c6c68b",
+    "commit_date": 1759487586
+  },
+  {
+    "ACTORS": 262,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 282,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "b3fa3cd9124d25045f7e3d78685c08f2042cd50c",
+    "commit_date": 1771753835
+  },
+  {
+    "ACTORS": 101,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 114,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "b533eb0f2f61e5643e680f386b5b75531365eea1",
+    "commit_date": 1756897014
+  },
+  {
+    "ACTORS": 182,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 198,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "ba0e228d4f7b04b68d872b2465eb3fc0488ffa02",
+    "commit_date": 1764326898
+  },
+  {
+    "ACTORS": 182,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 198,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "bb379ced9e9fcfe8a9c420d004b3486ceb699cd2",
+    "commit_date": 1764239994
+  },
+  {
+    "ACTORS": 178,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 194,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "bb394607c19d28513b93074216de5ae93fb7af6f",
+    "commit_date": 1763794189
+  },
+  {
+    "ACTORS": 255,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 275,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "bc4d105478689802d569b1934b9c732e721bc228",
+    "commit_date": 1770806120
+  },
+  {
+    "ACTORS": 221,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 240,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "be60c7db493783f90952e2662d2b1d3d3792d46e",
+    "commit_date": 1767509346
+  },
+  {
+    "ACTORS": 178,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 194,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "c0fdddbb5bacd88e7856aba24e6974371333d037",
+    "commit_date": 1763631794
+  },
+  {
+    "ACTORS": 172,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 185,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "c12bdb7b6705819ba0ca1cfd4b735ee213eccdba",
+    "commit_date": 1758538449
+  },
+  {
+    "ACTORS": 260,
+    "EXTRA_JS_MODULES": 749,
+    "MOZ_SRC_FILES": 280,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "c14416f60304b4e38d308e301f6a91b27b7437e9",
+    "commit_date": 1771322607
+  },
+  {
+    "ACTORS": 184,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 200,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "c21e42d057f26995f1672875a6e0db62471c0f91",
+    "commit_date": 1764843635
+  },
+  {
+    "ACTORS": 103,
+    "EXTRA_JS_MODULES": 820,
+    "MOZ_SRC_FILES": 116,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "c36d2dc527b6f7a5e8114c87b3b3fb4e6d6642c0",
+    "commit_date": 1757501865
+  },
+  {
+    "ACTORS": 218,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 237,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "c520a9586aaeeb63a4d63977e30f96654f969a32",
+    "commit_date": 1766571033
+  },
+  {
+    "ACTORS": 254,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 274,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "c7da3c7d187215d6c5fec7a594708843b90f69c5",
+    "commit_date": 1770538641
+  },
+  {
+    "ACTORS": 188,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 204,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "c9050affc08bad0c2fdaf9768f40c4929918d12e",
+    "commit_date": 1765100007
+  },
+  {
+    "ACTORS": 176,
+    "EXTRA_JS_MODULES": 764,
+    "MOZ_SRC_FILES": 192,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "ced72179decc0fcffcbf4f4540ff4bcafbfb182e",
+    "commit_date": 1762674684
+  },
+  {
+    "ACTORS": 246,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 266,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "d11b8803574cd97f284f9668e25b533d91dd268e",
+    "commit_date": 1768473649
+  },
+  {
+    "ACTORS": 177,
+    "EXTRA_JS_MODULES": 764,
+    "MOZ_SRC_FILES": 193,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "d1836d616485d3e8a8aba9cc855012f45023584a",
+    "commit_date": 1762770078
+  },
+  {
+    "ACTORS": 103,
+    "EXTRA_JS_MODULES": 821,
+    "MOZ_SRC_FILES": 116,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "d35607c067b9937f3bee92fdf9299a9c74622746",
+    "commit_date": 1757932548
+  },
+  {
+    "ACTORS": 173,
+    "EXTRA_JS_MODULES": 753,
+    "MOZ_SRC_FILES": 186,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "d603724a2b458df4fc1908f8aacad95722763494",
+    "commit_date": 1758880887
+  },
+  {
+    "ACTORS": 254,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 274,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "d7ae03ec4f02af60aedc5bd46ed7b18d3aa596b0",
+    "commit_date": 1770459049
+  },
+  {
+    "ACTORS": 102,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 115,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "d7bad5884eba3db7f08b4afcc30d33fa9e66041b",
+    "commit_date": 1756982195
+  },
+  {
+    "ACTORS": 221,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 240,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "d88d4c8d3d716710ecfc174106db667e9378dd19",
+    "commit_date": 1767349820
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 760,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "d999a8ab50b151c28ef33c2009a37554e9a315de",
+    "commit_date": 1760524854
+  },
+  {
+    "ACTORS": 209,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 225,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "d9b7fbd90f416e903952c672dadc103333f02d3a",
+    "commit_date": 1766054350
+  },
+  {
+    "ACTORS": 208,
+    "EXTRA_JS_MODULES": 768,
+    "MOZ_SRC_FILES": 224,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "dac09b7cc7026d7ddc3b1f9f50d017c0177c3e94",
+    "commit_date": 1765881979
+  },
+  {
+    "ACTORS": 100,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 113,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "db09f7c8671b81998f63e189d27cc80f465c1d40",
+    "commit_date": 1756810138
+  },
+  {
+    "ACTORS": 250,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 270,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "db71b4860a66cba1512709b3fd8108a581dc5c97",
+    "commit_date": 1769682935
+  },
+  {
+    "ACTORS": 248,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 268,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "dba7d6c258aeb6f5aa2b1d0708d4e704c72ff30f",
+    "commit_date": 1768991212
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 758,
+    "MOZ_SRC_FILES": 190,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "dbbdb7764858faaf04adbf03bc64adc895666782",
+    "commit_date": 1760165398
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "dc43a0df23837c073c0559d2d4dbda010549cfbc",
+    "commit_date": 1761994296
+  },
+  {
+    "ACTORS": 172,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 185,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "de8e54ecf601b5a5a2ea29291a5945884e5e688a",
+    "commit_date": 1758019400
+  },
+  {
+    "ACTORS": 255,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 275,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "deb00e4b5e9b2a6bcdef83741732226e96251cb6",
+    "commit_date": 1770719198
+  },
+  {
+    "ACTORS": 261,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 281,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "e149aed5126a3cc235eb13744b6c0749e835b647",
+    "commit_date": 1771495450
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 760,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "e2034ede22a2f71c6ad45e1321822dd6c22c2ee7",
+    "commit_date": 1760611688
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 755,
+    "MOZ_SRC_FILES": 187,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "e2a5d1a0c90e4ef50ebb2c8efefe0ca54f737a63",
+    "commit_date": 1759647158
+  },
+  {
+    "ACTORS": 100,
+    "EXTRA_JS_MODULES": 819,
+    "MOZ_SRC_FILES": 113,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "e4982d483efc3153bc0382951c3901d0bc2a9793",
+    "commit_date": 1756723079
+  },
+  {
+    "ACTORS": 246,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 266,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "e5219f2ad48f6b993c34fc25961e5900ffabfe65",
+    "commit_date": 1768732389
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "e5c691fd077ad362c7b77fba6735c5838708458d",
+    "commit_date": 1762339282
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "ecdc16905e250ad631f23e9ec604b8e099f7ad53",
+    "commit_date": 1762166953
+  },
+  {
+    "ACTORS": 172,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 185,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "ed3417b46718292d38176059f85f61ab2108de52",
+    "commit_date": 1758279476
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "edf1f509d135f59b8f3c48b70b61c36baa413e2d",
+    "commit_date": 1761375060
+  },
+  {
+    "ACTORS": 182,
+    "EXTRA_JS_MODULES": 767,
+    "MOZ_SRC_FILES": 198,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "ef753365efe7cf5dba0766a0ec4954848cc68c43",
+    "commit_date": 1764412801
+  },
+  {
+    "ACTORS": 262,
+    "EXTRA_JS_MODULES": 750,
+    "MOZ_SRC_FILES": 282,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "f1d6d6c00b0e203d7f4684ecc2f2fcac054e843d",
+    "commit_date": 1771582921
+  },
+  {
+    "ACTORS": 175,
+    "EXTRA_JS_MODULES": 763,
+    "MOZ_SRC_FILES": 191,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "f50fe117b8e58157db9ed5d05713f24adf08195e",
+    "commit_date": 1762252496
+  },
+  {
+    "ACTORS": 222,
+    "EXTRA_JS_MODULES": 770,
+    "MOZ_SRC_FILES": 241,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "f542c32c99f49cfc6aadefb54be5a10ec0698175",
+    "commit_date": 1767694429
+  },
+  {
+    "ACTORS": 243,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 262,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "f9a3a71076fe19c848b8a519c6dec8239d5d6ec8",
+    "commit_date": 1767869001
+  },
+  {
+    "ACTORS": 172,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 185,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "facb6488ec171c44d427b667e0aa08027d0556b4",
+    "commit_date": 1758437501
+  },
+  {
+    "ACTORS": 246,
+    "EXTRA_JS_MODULES": 751,
+    "MOZ_SRC_FILES": 266,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "fb4142d686fc22f2ce831297c3fdce9a77c9c9c4",
+    "commit_date": 1768387446
+  },
+  {
+    "ACTORS": 255,
+    "EXTRA_JS_MODULES": 752,
+    "MOZ_SRC_FILES": 275,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "fc2d3d8b83db426669407226be72c62378ca5288",
+    "commit_date": 1770720034
+  },
+  {
+    "ACTORS": 174,
+    "EXTRA_JS_MODULES": 757,
+    "MOZ_SRC_FILES": 189,
+    "EXTRA_PP_JS_MODULES": 3,
+    "revision": "fdbf27485b14b3e81f9cb5ffd3fa2d9b2776709a",
+    "commit_date": 1759831587
+  }
+]

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are we moz-src:// yet?</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="fetch-utils.js"></script>
+    <script src="shared.js"></script>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Are we moz-src:// yet?</h1>
+    </div>
+
+    <div class="charts-grid">
+      <div class="chart-container" id="testFailureContainer">
+        <div class="chart-header">
+          <h2 id="test-failures">Percentage of moz-src files</h2>
+          <p class="info-text">Vs extra JS modules and actors</p>
+        </div>
+      <div id="testFailureChart"></div>
+    </div>
+
+    <div id="errorMessage" class="error" style="display: none;"></div>
+
+    <script>
+
+      async function load(file) {
+        let resp = await fetchData(file);
+        if (resp.ok) {
+          return resp.json();
+        }
+      }
+
+      (async () => {
+        let data = await load('data.json');
+
+        data.sort((a, b) => b.commit_date - a.commit_date);
+
+        let dates = [];
+        let mozSrcFiles = [];
+        let extraJSModules = [];
+        let extraPPJSModules = [];
+        let actors = [];
+
+        data.forEach(obj => {
+          dates.push(new Date(obj.commit_date * 1000));
+          mozSrcFiles.push(obj.MOZ_SRC_FILES);
+          extraJSModules.push(obj.EXTRA_JS_MODULES);
+          extraPPJSModules.push(obj.EXTRA_PP_JS_MODULES);
+          actors.push(obj.ACTORS);
+        });
+
+        let makeData = (data, name) => ({
+          x: dates,
+          y: data,
+          mode: 'lines',
+          name: name
+        });
+
+        let graphData = [
+          makeData(mozSrcFiles, "MOZ_SRC_FILES"),
+          makeData(extraJSModules, "EXTRA_JS_MODULES"),
+          makeData(extraPPJSModules, "EXTRA_PP_JS_MODULES"),
+          makeData(actors, "ACTORS"),
+        ];
+
+        const jobLayout = {
+          xaxis: { title: 'Date', type: 'date' },
+          yaxis: {
+            title: 'File Count',
+            rangemode: 'tozero'
+          },
+          hovermode: 'closest',
+          showlegend: true,
+          margin: { l: 60, r: 40, t: 20, b: 60 },
+          hoverlabel: {
+            bgcolor: '#2a2a2a',
+            bordercolor: '#2a2a2a',
+            font: {
+              size: 15,
+              color: 'white',
+              family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+            }
+          }
+        };
+
+        Plotly.newPlot('testFailureChart', graphData, jobLayout, { responsive: true });
+      })();
+
+    </script>
+</body>
+</html>
