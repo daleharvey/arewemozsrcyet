@@ -4,8 +4,10 @@ import { exec } from 'node:child_process';
 
 const REPO_PATH = "./firefox/"
 const DATA_FILE = "./data.json";
-const MAX_RELEASES_TO_PROCESS = 1;
-const firstGleanNightly = "20201005215809";
+const MAX_RELEASES_TO_PROCESS = 100;
+// moz-src was introduced in 3rd March, 2025 @ https://bugzilla.mozilla.org/show_bug.cgi?id=1945566
+// So start from just after then.
+const FIRST_NIGHTLY = "20250305094745";
 
 function execCmd(cmd) {
   console.log("Executing: ", cmd)
@@ -34,7 +36,6 @@ async function checkForUpdatesInternal() {
     }
   } catch(e) { }
 
-
   let response = await fetch("https://hg.mozilla.org/mozilla-central/firefoxreleases");
   let $ = cheerio.load(await response.text());
 
@@ -44,10 +45,7 @@ async function checkForUpdatesInternal() {
       value: {
         hgid: {
           selector: "a",
-          value: (el, key) => {
-            let href = $(el).attr('href');
-            return href.split("/").pop();
-          }
+          value: (el) => $(el).attr('href').split("/").pop()
         },
         build_id: {
           selector: "td:nth-child(2)"
@@ -63,7 +61,7 @@ async function checkForUpdatesInternal() {
     console.log("Processing", build_id);
 
     if (
-      build_id < firstGleanNightly ||
+      build_id < FIRST_NIGHTLY ||
       seenBuilds?.[build_id]
     ) {
       continue;
@@ -73,12 +71,24 @@ async function checkForUpdatesInternal() {
       break;
     }
 
-    let hg2git = await (await fetch(`https://lando.moz.tools/api/hg2git/firefox/${hgid}`)).json();
+    let hg2git;
+    let url = `https://lando.moz.tools/api/hg2git/firefox/${hgid}`;
+    try {
+      hg2git = await (await fetch(url)).json();
+    } catch(e) {
+      console.error("error fetching", url, e);
+      continue;
+    }
 
-    console.log("Checking out: ", hg2git.git_hash);
     await execCmd(`git checkout ${hg2git.git_hash}`);
-    let data = await execCmd(`./mach python ../scripts/mozbuild_vs_js_modules_actors_stats.py`);
-    let json = JSON.parse(data);
+    let json, data;
+    try {
+      data = await execCmd(`./mach python ../scripts/mozbuild_vs_js_modules_actors_stats.py`);
+      json = JSON.parse(data.split("\n")[0]);
+    } catch (e) {
+      console.error("Error processing ./mach", data, e);
+      continue;
+    }
     json.build_id = build_id;
     buildids.push(build_id);
     seenBuilds[build_id] = true;
@@ -102,4 +112,6 @@ async function checkForUpdates() {
   }
 }
 
+// Update once now, and then every 6 hours
 checkForUpdates();
+setInterval(checkForUpdates, 6 * 3600 * 1000);

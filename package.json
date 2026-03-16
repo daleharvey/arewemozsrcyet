@@ -1,5 +1,5 @@
 {
-  "name": "arandomurl.com",
+  "name": "arewemozsrcyet.com",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,8 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^1.2.0",
-    "koa": "^2.11.0",
-    "koa-static": "^5.0.0"
+    "cheerio": "^1.2.0"
   }
 }
