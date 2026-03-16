@@ -5,6 +5,7 @@
 from mozbuild.base import MozbuildObject
 from mozversioncontrol import get_repository_from_env
 import logging
+import json
 
 _log = logging.getLogger(__name__)
 
@@ -62,7 +63,4 @@ if __name__ == "__main__":
     rev = get_repository_from_env().base_ref_as_commit()
     info["revision"] = rev
     info["commit_date"] = get_repository_from_env().get_commit_time()
-    with open(f"moz_src_stats_{rev}.json", "w") as f:
-        import json
-
-        json.dump(info, f, indent=2)
+    print(json.dumps(info))
