@@ -7,7 +7,9 @@ const DATA_FILE = "./data.json";
 const MAX_RELEASES_TO_PROCESS = 100;
 // moz-src was introduced in 3rd March, 2025 @ https://bugzilla.mozilla.org/show_bug.cgi?id=1945566
 // So start from just after then.
-const FIRST_NIGHTLY = "20250305094745";
+//const FIRST_NIGHTLY = "20250305094745";
+// However ./mach python seems to have problems running anytime up until around this build.
+const FIRST_NIGHTLY = "20250910212829";
 
 function execCmd(cmd) {
   console.log("Executing: ", cmd)
@@ -58,18 +60,17 @@ async function checkForUpdatesInternal() {
   let buildids = [];
 
   for (let {hgid, build_id} of data.releases) {
-    console.log("Processing", build_id);
-
     if (
       build_id < FIRST_NIGHTLY ||
       seenBuilds?.[build_id]
     ) {
       continue;
     }
-
     if (++processedReleases > MAX_RELEASES_TO_PROCESS) {
       break;
     }
+
+    console.log("Processing", build_id);
 
     let hg2git;
     let url = `https://lando.moz.tools/api/hg2git/firefox/${hgid}`;
@@ -77,6 +78,11 @@ async function checkForUpdatesInternal() {
       hg2git = await (await fetch(url)).json();
     } catch(e) {
       console.error("error fetching", url, e);
+      continue;
+    }
+
+    if (!hg2git?.git_hash) {
+      console.error("Did not retrieve valid git hash for", url);
       continue;
     }
 
@@ -100,7 +106,7 @@ async function checkForUpdatesInternal() {
   await fs.writeFile(DATA_FILE, JSON.stringify(cacheJson));
 
   let str = buildids.join(", ").replace(/, ([^,]*)$/, " and $1");
-  //await git(`commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${string}.' ${dataFile}`);
+  //await git(`commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${string}.' ${DATA_FILE}`);
   //await git("push");
 }
 
