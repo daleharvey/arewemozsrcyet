@@ -11,9 +11,12 @@ const MAX_RELEASES_TO_PROCESS = 100;
 // However ./mach python seems to have problems running anytime up until around this build.
 const FIRST_NIGHTLY = "20250910212829";
 
-function execCmd(cmd) {
+function execCmd(cmd, cwd) {
   console.log("Executing: ", cmd)
-  let options = {maxBuffer: 1024 * 1024 * 50, cwd: REPO_PATH};
+  let options = {maxBuffer: 1024 * 1024 * 50};
+  if (cwd) {
+    options.cwd = cwd
+  }
   return new Promise((resolve, reject) => {
     exec(cmd, options, (error, stdout, stderr) => {
       if (stderr) {
@@ -86,7 +89,8 @@ async function checkForUpdatesInternal() {
       continue;
     }
 
-    await execCmd(`git checkout ${hg2git.git_hash}`);
+    await execCmd(`git pull`, REPO_PATH);
+    await execCmd(`git checkout ${hg2git.git_hash}`, REPO_PATH);
     let json, data;
     try {
       data = await execCmd(`./mach python ../scripts/mozbuild_vs_js_modules_actors_stats.py`);
@@ -99,15 +103,18 @@ async function checkForUpdatesInternal() {
     buildids.push(build_id);
     seenBuilds[build_id] = true;
     cacheJson.push(json);
-    console.log("Saved json: ", json)
   }
 
-  console.log("Finished processing: ", buildids)
   await fs.writeFile(DATA_FILE, JSON.stringify(cacheJson));
+  console.log("Finished processing: ", buildids);
+
+  if (!buildids.length) {
+    return;
+  }
 
   let str = buildids.join(", ").replace(/, ([^,]*)$/, " and $1");
-  //await git(`commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${string}.' ${DATA_FILE}`);
-  //await git("push");
+  await execCmd(`commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${string}.' ${DATA_FILE}`);
+  await execCmd("push");
 }
 
 async function checkForUpdates() {
