@@ -50,7 +50,7 @@ def extract_info_from_mozbuild():
             )
             for path, _variable, key, value in actors:
                 if key == "actors":
-                    counts["ACTORS"] = counts.get(var, 0) + 1
+                    counts["ACTORS"] = counts.get("ACTORS", 0) + 1
         except AssertionError:
             _log.error(f"Skipping moz.build with AST issues: {mozbuild_path}")
     return counts
