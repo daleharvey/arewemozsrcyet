@@ -4,7 +4,7 @@ import { exec } from 'node:child_process';
 
 const REPO_PATH = "./firefox/"
 const DATA_FILE = "./data.json";
-const MAX_RELEASES_TO_PROCESS = 100;
+const MAX_RELEASES_TO_PROCESS = 50;
 // moz-src was introduced in 3rd March, 2025 @ https://bugzilla.mozilla.org/show_bug.cgi?id=1945566
 // So start from just after then.
 //const FIRST_NIGHTLY = "20250305094745";
@@ -18,16 +18,20 @@ function execCmd(cmd, cwd) {
     options.cwd = cwd
   }
   return new Promise((resolve, reject) => {
-    exec(cmd, options, (error, stdout, stderr) => {
-      if (stderr) {
-        console.log(stderr);
-      }
-      if (error) {
-        reject(error);
-      } else {
-        resolve(stdout);
-      }
-    })
+    try {
+      exec(cmd, options, (error, stdout, stderr) => {
+        if (stderr) {
+          console.log(stderr);
+        }
+        if (error) {
+          reject(error);
+        } else {
+          resolve(stdout);
+        }
+      });
+    } catch (e) {
+      reject(e);
+    }
   });
 }
 
@@ -89,32 +93,34 @@ async function checkForUpdatesInternal() {
       continue;
     }
 
-    await execCmd(`git pull`, REPO_PATH);
-    await execCmd(`git checkout ${hg2git.git_hash}`, REPO_PATH);
     let json, data;
     try {
-      data = await execCmd(`./mach python ../scripts/mozbuild_vs_js_modules_actors_stats.py`);
+      await execCmd(`git reset --hard HEAD`, REPO_PATH);
+      await execCmd(`git checkout main`, REPO_PATH);
+      await execCmd(`git pull`, REPO_PATH);
+      await execCmd(`git checkout ${hg2git.git_hash}`, REPO_PATH);
+      await execCmd(`./mach build`, REPO_PATH);
+      data = await execCmd(`./mach python ../scripts/mozbuild_vs_js_modules_actors_stats.py`, REPO_PATH);
       json = JSON.parse(data.split("\n")[0]);
+      json.build_id = build_id;
+      cacheJson.push(json);
     } catch (e) {
       console.error("Error processing ./mach", data, e);
       continue;
     }
-    json.build_id = build_id;
     buildids.push(build_id);
     seenBuilds[build_id] = true;
-    cacheJson.push(json);
+    await fs.writeFile(DATA_FILE, JSON.stringify(cacheJson));
   }
-
-  await fs.writeFile(DATA_FILE, JSON.stringify(cacheJson));
   console.log("Finished processing: ", buildids);
 
   if (!buildids.length) {
     return;
   }
 
-  let str = buildids.join(", ").replace(/, ([^,]*)$/, " and $1");
-  await execCmd(`commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${string}.' ${DATA_FILE}`);
-  await execCmd("push");
+  //let str = buildids.join(", ").replace(/, ([^,]*)$/, " and $1");
+  //await execCmd(`git commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${str}.' ${DATA_FILE}`);
+  //await execCmd("git push");
 }
 
 async function checkForUpdates() {
