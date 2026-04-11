@@ -99,7 +99,6 @@ async function checkForUpdatesInternal() {
       await execCmd(`git checkout main`, REPO_PATH);
       await execCmd(`git pull`, REPO_PATH);
       await execCmd(`git checkout ${hg2git.git_hash}`, REPO_PATH);
-      await execCmd(`./mach build`, REPO_PATH);
       data = await execCmd(`./mach python ../scripts/mozbuild_vs_js_modules_actors_stats.py`, REPO_PATH);
       json = JSON.parse(data.split("\n")[0]);
       json.build_id = build_id;
@@ -118,9 +117,9 @@ async function checkForUpdatesInternal() {
     return;
   }
 
-  //let str = buildids.join(", ").replace(/, ([^,]*)$/, " and $1");
-  //await execCmd(`git commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${str}.' ${DATA_FILE}`);
-  //await execCmd("git push");
+  let str = buildids.join(", ").replace(/, ([^,]*)$/, " and $1");
+  await execCmd(`git commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${str}.' ${DATA_FILE}`);
+  await execCmd("git push");
 }
 
 async function checkForUpdates() {
