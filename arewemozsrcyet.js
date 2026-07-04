@@ -119,7 +119,7 @@ async function checkForUpdatesInternal() {
 
   let str = buildids.join(", ").replace(/, ([^,]*)$/, " and $1");
   await execCmd(`git commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${str}.' ${DATA_FILE}`);
-  await execCmd("git push");
+  await execCmd("git push origin main");
 }
 
 async function checkForUpdates() {
