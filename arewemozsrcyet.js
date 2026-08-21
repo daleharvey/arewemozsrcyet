@@ -1,39 +1,22 @@
 import fs from "fs/promises"
 import * as cheerio from "cheerio";
-import { exec } from 'node:child_process';
+import {
+  CHANGES_FILE,
+  DATA_FILE,
+  SNAPSHOT_FILE,
+  collectStats,
+  diffFiles,
+  execCmd,
+  logChanges,
+  readJson,
+} from "./common.js";
 
-const REPO_PATH = "./firefox/"
-const DATA_FILE = "./data.json";
 const MAX_RELEASES_TO_PROCESS = 50;
 // moz-src was introduced in 3rd March, 2025 @ https://bugzilla.mozilla.org/show_bug.cgi?id=1945566
 // So start from just after then.
 //const FIRST_NIGHTLY = "20250305094745";
 // However ./mach python seems to have problems running anytime up until around this build.
 const FIRST_NIGHTLY = "20250910212829";
-
-function execCmd(cmd, cwd) {
-  console.log("Executing: ", cmd)
-  let options = {maxBuffer: 1024 * 1024 * 50};
-  if (cwd) {
-    options.cwd = cwd
-  }
-  return new Promise((resolve, reject) => {
-    try {
-      exec(cmd, options, (error, stdout, stderr) => {
-        if (stderr) {
-          console.log(stderr);
-        }
-        if (error) {
-          reject(error);
-        } else {
-          resolve(stdout);
-        }
-      });
-    } catch (e) {
-      reject(e);
-    }
-  });
-}
 
 async function checkForUpdatesInternal() {
   let cacheJson = [];
@@ -44,6 +27,9 @@ async function checkForUpdatesInternal() {
       seenBuilds[result.build_id] = true;
     }
   } catch(e) { }
+
+  let snapshot = await readJson(SNAPSHOT_FILE, { build_id: null, files: {} });
+  let changesJson = await readJson(CHANGES_FILE, {});
 
   let response = await fetch("https://hg.mozilla.org/mozilla-central/firefoxreleases");
   let $ = cheerio.load(await response.text());
@@ -63,20 +49,14 @@ async function checkForUpdatesInternal() {
     }]
   });
 
-  let processedReleases = 0;
   let buildids = [];
 
-  for (let {hgid, build_id} of data.releases) {
-    if (
-      build_id < FIRST_NIGHTLY ||
-      seenBuilds?.[build_id]
-    ) {
-      continue;
-    }
-    if (++processedReleases > MAX_RELEASES_TO_PROCESS) {
-      break;
-    }
+  let pending = data.releases
+    .filter(({build_id}) => build_id >= FIRST_NIGHTLY && !seenBuilds?.[build_id])
+    .slice(0, MAX_RELEASES_TO_PROCESS)
+    .sort((a, b) => a.build_id.localeCompare(b.build_id));
 
+  for (let {hgid, build_id} of pending) {
     console.log("Processing", build_id);
 
     let hg2git;
@@ -93,23 +73,30 @@ async function checkForUpdatesInternal() {
       continue;
     }
 
-    let json, data;
+    let json, files;
     try {
-      await execCmd(`git reset --hard HEAD`, REPO_PATH);
-      await execCmd(`git checkout main`, REPO_PATH);
-      await execCmd(`git pull`, REPO_PATH);
-      await execCmd(`git checkout ${hg2git.git_hash}`, REPO_PATH);
-      data = await execCmd(`./mach python ../scripts/mozbuild_vs_js_modules_actors_stats.py`, REPO_PATH);
-      json = JSON.parse(data.split("\n")[0]);
+      ({ json, files } = await collectStats(hg2git.git_hash));
       json.build_id = build_id;
       cacheJson.push(json);
     } catch (e) {
-      console.error("Error processing ./mach", data, e);
+      console.error("Error processing ./mach", e);
       continue;
     }
+
+    if (snapshot.build_id && snapshot.build_id < build_id) {
+      let changes = diffFiles(snapshot.files, files);
+      logChanges(build_id, snapshot.build_id, changes);
+      changesJson[build_id] = { previous_build_id: snapshot.build_id, changes };
+    }
+    if (!snapshot.build_id || snapshot.build_id < build_id) {
+      snapshot = { build_id, files };
+    }
+
     buildids.push(build_id);
     seenBuilds[build_id] = true;
     await fs.writeFile(DATA_FILE, JSON.stringify(cacheJson));
+    await fs.writeFile(SNAPSHOT_FILE, JSON.stringify(snapshot));
+    await fs.writeFile(CHANGES_FILE, JSON.stringify(changesJson));
   }
   console.log("Finished processing: ", buildids);
 
@@ -118,7 +105,9 @@ async function checkForUpdatesInternal() {
   }
 
   let str = buildids.join(", ").replace(/, ([^,]*)$/, " and $1");
-  await execCmd(`git commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${str}.' ${DATA_FILE}`);
+  let updatedFiles = `${DATA_FILE} ${SNAPSHOT_FILE} ${CHANGES_FILE}`;
+  await execCmd(`git add ${updatedFiles}`);
+  await execCmd(`git commit -m 'Automated update for build id${buildids.length > 1 ? "s" : ""} ${str}.' ${updatedFiles}`);
   await execCmd("git push origin main");
 }
 

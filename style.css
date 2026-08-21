@@ -144,3 +144,53 @@
         .chart-container > div[id$="Chart"] {
             height: 450px;
         }
+
+        .change-details {
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+
+        .change-details.visible {
+            display: block;
+        }
+
+        .change-details h3 {
+            margin: 0 0 5px 0;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .change-list {
+            list-style: none;
+            margin: 15px 0 0 0;
+            padding: 0;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.85rem;
+        }
+
+        .change-list li {
+            padding: 3px 0 3px 20px;
+            position: relative;
+        }
+
+        .change-list li::before {
+            position: absolute;
+            left: 0;
+            font-weight: 600;
+        }
+
+        .change-list .added::before {
+            content: "+";
+            color: #017a40;
+        }
+
+        .change-list a {
+            color: #0060df;
+            text-decoration: none;
+        }
+
+        .change-list a:hover {
+            text-decoration: underline;
+        }

@@ -17,9 +17,13 @@
       <div class="chart-container" id="testFailureContainer">
         <div class="chart-header">
           <h2 id="test-failures">Percentage of moz-src files</h2>
-          <p class="info-text">Vs extra JS modules and actors</p>
+          <p class="info-text">
+            Vs extra JS modules and actors, click a marked point to list the
+            modules it added to EXTRA_JS_MODULES
+          </p>
         </div>
       <div id="testFailureChart"></div>
+      <div id="changeDetails" class="change-details"></div>
     </div>
 
     <div id="errorMessage" class="error" style="display: none;"></div>
@@ -33,38 +37,79 @@
         }
       }
 
+      const VARIABLES = [
+        "MOZ_SRC_FILES",
+        "EXTRA_JS_MODULES",
+        "EXTRA_PP_JS_MODULES",
+        "ACTORS",
+      ];
+
+      const TRACKED_VARIABLE = "EXTRA_JS_MODULES";
+
+      const MAX_FILES_IN_TOOLTIP = 5;
+
+      function summariseAdded(added) {
+        if (!added.length) {
+          return "";
+        }
+        let lines = [`<br>${added.length} added to ${TRACKED_VARIABLE}`];
+        for (let file of added.slice(0, MAX_FILES_IN_TOOLTIP)) {
+          lines.push(file);
+        }
+        if (added.length > MAX_FILES_IN_TOOLTIP) {
+          lines.push(`… and ${added.length - MAX_FILES_IN_TOOLTIP} more`);
+        }
+        return lines.join("<br>");
+      }
+
+      function showAddedDetails(obj, previousBuildId, added) {
+        let details = document.getElementById("changeDetails");
+        let date = new Date(obj.commit_date * 1000).toLocaleDateString();
+        let list = path => `
+          <li class="added">
+            <a href="https://searchfox.org/firefox-main/source/${path}"
+               target="_blank" rel="noopener">${path}</a>
+          </li>`;
+        details.innerHTML = `
+          <h3>${added.length} added to ${TRACKED_VARIABLE} in ${obj.build_id} (${date})</h3>
+          <p class="info-text">Since build ${previousBuildId}</p>
+          <ul class="change-list">${added.map(list).join("")}</ul>`;
+        details.classList.add("visible");
+        details.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
       (async () => {
         let data = await load("data.json");
+        let moduleChanges = await load("module-changes.json") ?? {};
 
         data.sort((a, b) => b.commit_date - a.commit_date);
 
-        let dates = [];
-        let mozSrcFiles = [];
-        let extraJSModules = [];
-        let extraPPJSModules = [];
-        let actors = [];
+        let addedBy = obj => {
+          let entry = moduleChanges[obj.build_id];
+          let added = entry?.changes?.[TRACKED_VARIABLE]?.added ?? [];
+          return added.length ? { added, previous_build_id: entry.previous_build_id } : null;
+        };
 
-        data.forEach(obj => {
-          dates.push(new Date(obj.commit_date * 1000));
-          mozSrcFiles.push(obj.MOZ_SRC_FILES);
-          extraJSModules.push(obj.EXTRA_JS_MODULES);
-          extraPPJSModules.push(obj.EXTRA_PP_JS_MODULES);
-          actors.push(obj.ACTORS);
-        });
+        let dates = data.map(obj => new Date(obj.commit_date * 1000));
 
-        let makeData = (data, name) => ({
-          x: dates,
-          y: data,
-          mode: 'lines',
-          name: name
-        });
+        let makeData = name => {
+          let trace = {
+            x: dates,
+            y: data.map(obj => obj[name]),
+            hovertemplate: `%{y} ${name}<br>%{x|%d %b %Y}<extra></extra>`,
+            mode: 'lines',
+            name: name
+          };
+          if (name === TRACKED_VARIABLE) {
+            trace.text = data.map(obj => summariseAdded(addedBy(obj)?.added ?? []));
+            trace.hovertemplate = `%{y} ${name}<br>%{x|%d %b %Y}%{text}<extra></extra>`;
+            trace.mode = 'lines+markers';
+            trace.marker = { size: data.map(obj => addedBy(obj) ? 6 : 0) };
+          }
+          return trace;
+        };
 
-        let graphData = [
-          makeData(mozSrcFiles, "MOZ_SRC_FILES"),
-          makeData(extraJSModules, "EXTRA_JS_MODULES"),
-          makeData(extraPPJSModules, "EXTRA_PP_JS_MODULES"),
-          makeData(actors, "ACTORS"),
-        ];
+        let graphData = VARIABLES.map(makeData);
 
         const jobLayout = {
           xaxis: { title: 'Date', type: 'date' },
@@ -78,6 +123,7 @@
           hoverlabel: {
             bgcolor: '#2a2a2a',
             bordercolor: '#2a2a2a',
+            align: 'left',
             font: {
               size: 15,
               color: 'white',
@@ -86,7 +132,42 @@
           }
         };
 
-        Plotly.newPlot('testFailureChart', graphData, jobLayout, { responsive: true });
+        let chart = document.getElementById('testFailureChart');
+        Plotly.newPlot(chart, graphData, jobLayout, { responsive: true });
+
+        let setPointer = pointer => {
+          let dragLayer = chart.querySelector('.nsewdrag');
+          if (!dragLayer) {
+            return;
+          }
+          if (pointer) {
+            // Plotly marks its own cursor as important, so we have to as well.
+            dragLayer.style.setProperty('cursor', 'pointer', 'important');
+          } else {
+            dragLayer.style.removeProperty('cursor');
+          }
+        };
+
+        chart.on('plotly_hover', event => {
+          let { curveNumber, pointIndex } = event.points[0];
+          setPointer(
+            VARIABLES[curveNumber] === TRACKED_VARIABLE && addedBy(data[pointIndex])
+          );
+        });
+
+        chart.on('plotly_unhover', () => setPointer(false));
+
+        chart.on('plotly_click', event => {
+          let { curveNumber, pointIndex } = event.points[0];
+          if (VARIABLES[curveNumber] !== TRACKED_VARIABLE) {
+            return;
+          }
+          let obj = data[pointIndex];
+          let change = addedBy(obj);
+          if (change) {
+            showAddedDetails(obj, change.previous_build_id, change.added);
+          }
+        });
       })();
 
     </script>

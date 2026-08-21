@@ -6,8 +6,13 @@ from mozbuild.base import MozbuildObject
 from mozversioncontrol import get_repository_from_env
 import logging
 import json
+import posixpath
 
 _log = logging.getLogger(__name__)
+
+
+def source_path(mozbuild_path, value):
+    return posixpath.normpath(posixpath.join(posixpath.dirname(mozbuild_path), value))
 
 
 def extract_info_from_mozbuild():
@@ -16,6 +21,7 @@ def extract_info_from_mozbuild():
     mbo = MozbuildObject.from_environment()
     reader = mbo.mozbuild_reader(config_mode="empty")
     counts = dict()
+    files = dict()
     for mozbuild_path in paths:
         if mozbuild_path.startswith("python/mozbuild/") or mozbuild_path.startswith(
             "third_party"
@@ -29,6 +35,7 @@ def extract_info_from_mozbuild():
             )
             for path, _variable, key, value in mods:
                 counts[var] = counts.get(var, 0) + 1
+                files.setdefault(var, []).append(source_path(mozbuild_path, value))
 
         if (
             mozbuild_path.startswith("build/")
@@ -51,14 +58,20 @@ def extract_info_from_mozbuild():
             for path, _variable, key, value in actors:
                 if key == "actors":
                     counts["ACTORS"] = counts.get("ACTORS", 0) + 1
+                    files.setdefault("ACTORS", []).append(
+                        source_path(mozbuild_path, value)
+                    )
         except AssertionError:
             _log.error(f"Skipping moz.build with AST issues: {mozbuild_path}")
+    counts["files"] = {var: sorted(var_files) for var, var_files in files.items()}
     return counts
 
 
 if __name__ == "__main__":
     info = extract_info_from_mozbuild()
     for key, count in info.items():
+        if key == "files":
+            continue
         _log.log(logging.INFO, f"{key}: {count}")
     rev = get_repository_from_env().base_ref_as_commit()
     info["revision"] = rev
